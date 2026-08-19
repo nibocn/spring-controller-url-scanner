@@ -1,11 +1,15 @@
 <idea-plugin>
-    <id>com.example.spring-controller-url-scanner</id>
-    <name>Spring Controller URL Scanner</name>
-    <vendor>Local</vendor>
+    <id>me.nibo.spring-url-scanner</id>
+    <name>Spring URL Scanner</name>
+    <vendor email="nibocn@gmail.com">NiBo</vendor>
 
     <description><![CDATA[
-        Scans project sources and dependency JARs for Spring MVC controller mappings.
+        Spring URL Scanner finds Spring MVC controller endpoints and OpenFeign client mappings in Java projects.
     ]]></description>
+    <change-notes><![CDATA[
+        Initial Marketplace-ready release.
+    ]]></change-notes>
+    <icon>/META-INF/pluginIcon.svg</icon>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.java</depends>
@@ -14,6 +18,7 @@
         <toolWindow
                 id="Spring URLs"
                 anchor="right"
-                factoryClass="com.example.springurlscanner.SpringUrlToolWindowFactory"/>
+                icon="/icons/springUrlToolWindow.svg"
+                factoryClass="me.nibo.springurlscanner.SpringUrlToolWindowFactory"/>
     </extensions>
 </idea-plugin>

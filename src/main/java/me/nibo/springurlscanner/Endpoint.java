@@ -1,4 +1,4 @@
-package com.example.springurlscanner;
+package me.nibo.springurlscanner;
 
 import com.intellij.psi.PsiMethod;
 

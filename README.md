@@ -2,6 +2,10 @@
 
 An IntelliJ IDEA plugin that scans project source code and dependency JARs for Spring MVC controller mappings.
 
+Plugin ID: `me.nibo.spring-url-scanner`
+
+Source: <https://github.com/nibocn/spring-controller-url-scanner>
+
 ## Features
 
 - Scans Project + Libraries using IntelliJ PSI/indexes.
@@ -21,7 +25,7 @@ An IntelliJ IDEA plugin that scans project source code and dependency JARs for S
 
 ## Build
 
-Requires JDK 21.
+Requires JDK 21. Use the Gradle Wrapper for reproducible builds:
 
 ```bash
 ./gradlew buildPlugin
@@ -57,6 +61,14 @@ This is intentionally an MVP static scanner. It does not fully resolve every dyn
 - inherited/interface mappings in every edge case.
 
 For runtime truth, Spring Boot Actuator `/actuator/mappings` remains the most authoritative option.
+
+## Privacy
+
+The scanner runs locally inside the IDE. It does not upload source code, collect telemetry, or contact external services.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
 
 ## FeignClient scanning
 

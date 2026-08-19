@@ -1,4 +1,4 @@
-package com.example.springurlscanner;
+package me.nibo.springurlscanner;
 
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.project.Project;
