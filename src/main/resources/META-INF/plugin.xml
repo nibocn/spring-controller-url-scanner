@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.example.spring-controller-url-scanner</id>
+    <name>Spring Controller URL Scanner</name>
+    <vendor>Local</vendor>
+
+    <description><![CDATA[
+        Scans project sources and dependency JARs for Spring MVC controller mappings.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+                id="Spring URLs"
+                anchor="right"
+                factoryClass="com.example.springurlscanner.SpringUrlToolWindowFactory"/>
+    </extensions>
+</idea-plugin>
