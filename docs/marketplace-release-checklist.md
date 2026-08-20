@@ -8,8 +8,8 @@
 - 开发者/厂商：`NiBo`
 - 许可证：MIT
 - 源码地址：`https://github.com/nibocn/spring-controller-url-scanner`
-- 当前版本：`0.2.0`
-- 最低兼容版本：`242` / IntelliJ IDEA 2024.2+
+- 当前版本：`0.3.0`
+- 最低兼容版本：`241` / IntelliJ IDEA 2024.1+
 
 ## 构建命令
 

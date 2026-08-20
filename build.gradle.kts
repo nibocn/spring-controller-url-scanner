@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "me.nibo"
-version = "0.2.0"
+version = "0.3.0"
 
 repositories {
     mavenCentral()
@@ -18,14 +18,14 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     intellijPlatform {
-        intellijIdeaCommunity("2024.2.5")
+        intellijIdeaCommunity("2024.1.7")
         bundledPlugin("com.intellij.java")
     }
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
@@ -46,17 +46,16 @@ intellijPlatform {
             <p>The scanner runs locally inside the IDE. It does not upload source code, collect telemetry, or contact external services.</p>
         """.trimIndent()
         changeNotes = """
-            Add endpoint copy support.
+            Expand IntelliJ IDEA compatibility.
             <ul>
-                <li>Copy the selected endpoint cell with the standard copy shortcut.</li>
-                <li>Copy the current cell or the whole endpoint row from the context menu.</li>
-                <li>Show scan progress in the tool window and export all scanned results to CSV.</li>
-                <li>Read the Marketplace publishing token from the <code>JETBRAINS_PUBLISH_TOKEN</code> environment variable.</li>
+                <li>Lower the minimum supported IntelliJ IDEA version to 2024.1.</li>
+                <li>Build the plugin against the 2024.1 platform baseline.</li>
+                <li>Use a Java 17 bytecode baseline for compatibility with IntelliJ IDEA 2024.1.</li>
             </ul>
         """.trimIndent()
 
         ideaVersion {
-            sinceBuild = "242"
+            sinceBuild = "241"
             untilBuild = provider { null }
         }
 
