@@ -21,6 +21,9 @@ Source: <https://github.com/nibocn/spring-controller-url-scanner>
 - Combines class-level and method-level paths.
 - Shows HTTP method, URL, controller, handler method, and source JAR.
 - Filters by URL / class / handler / JAR name.
+- Copies the selected endpoint cell, or the whole endpoint row from the context menu.
+- Shows scan progress in the tool window.
+- Exports all scanned endpoints to CSV.
 - Double-click a row to navigate to source or decompiled class.
 
 ## Build

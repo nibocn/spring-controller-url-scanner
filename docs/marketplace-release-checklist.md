@@ -8,7 +8,7 @@
 - 开发者/厂商：`NiBo`
 - 许可证：MIT
 - 源码地址：`https://github.com/nibocn/spring-controller-url-scanner`
-- 初始版本：`0.1.0`
+- 当前版本：`0.2.0`
 - 最低兼容版本：`242` / IntelliJ IDEA 2024.2+
 
 ## 构建命令
@@ -37,14 +37,14 @@ build/distributions/
   - `docs/marketplace/screenshots/scan-results.png`
 - 插件介绍文案已准备在 `docs/marketplace-listing.md`，包含英文和中文两个版本。
 - 在插件页面明确说明：扫描在本地 IDE 内完成，不上传源码，不收集遥测数据。
-- 首次上传建议手动完成；后续版本可以配置 `PUBLISH_TOKEN` 后使用 `./gradlew publishPlugin` 自动发布。
+- 首次上传建议手动完成；后续版本可以配置 `JETBRAINS_PUBLISH_TOKEN` 后使用 `./gradlew publishPlugin` 自动发布。
 
 ## 可选签名配置
 
 IntelliJ Platform Gradle Plugin 默认可以从以下环境变量读取签名和发布配置：
 
 ```bash
-export PUBLISH_TOKEN='...'
+export JETBRAINS_PUBLISH_TOKEN='...'
 export PRIVATE_KEY='...'
 export PRIVATE_KEY_PASSWORD='...'
 export CERTIFICATE_CHAIN='...'

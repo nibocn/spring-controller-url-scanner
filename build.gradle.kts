@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "me.nibo"
-version = "0.1.0"
+version = "0.2.0"
 
 repositories {
     mavenCentral()
@@ -14,6 +14,9 @@ repositories {
 }
 
 dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
     intellijPlatform {
         intellijIdeaCommunity("2024.2.5")
         bundledPlugin("com.intellij.java")
@@ -24,6 +27,10 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
     }
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 intellijPlatform {
@@ -39,11 +46,12 @@ intellijPlatform {
             <p>The scanner runs locally inside the IDE. It does not upload source code, collect telemetry, or contact external services.</p>
         """.trimIndent()
         changeNotes = """
-            Initial Marketplace-ready release.
+            Add endpoint copy support.
             <ul>
-                <li>Scan Spring MVC controller mappings from project sources and libraries.</li>
-                <li>Optionally include OpenFeign client interfaces.</li>
-                <li>Filter discovered endpoints and navigate to source or decompiled classes.</li>
+                <li>Copy the selected endpoint cell with the standard copy shortcut.</li>
+                <li>Copy the current cell or the whole endpoint row from the context menu.</li>
+                <li>Show scan progress in the tool window and export all scanned results to CSV.</li>
+                <li>Read the Marketplace publishing token from the <code>JETBRAINS_PUBLISH_TOKEN</code> environment variable.</li>
             </ul>
         """.trimIndent()
 
@@ -65,7 +73,7 @@ intellijPlatform {
     }
 
     publishing {
-        token = providers.environmentVariable("PUBLISH_TOKEN")
+        token = providers.environmentVariable("JETBRAINS_PUBLISH_TOKEN")
         channels = listOf("default")
     }
 }

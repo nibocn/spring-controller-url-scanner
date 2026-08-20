@@ -7,7 +7,7 @@
         Spring URL Scanner finds Spring MVC controller endpoints and OpenFeign client mappings in Java projects.
     ]]></description>
     <change-notes><![CDATA[
-        Initial Marketplace-ready release.
+        Add endpoint copy support.
     ]]></change-notes>
     <icon>/META-INF/pluginIcon.svg</icon>
 

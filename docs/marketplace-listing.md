@@ -23,6 +23,9 @@ All scanning runs locally inside the IDE. The plugin does not upload source code
 - Combine class-level and method-level paths into complete endpoint URLs.
 - Optionally scan OpenFeign interfaces annotated with `@FeignClient`.
 - Filter results by type, URL, controller/client class, handler method, or source JAR.
+- Copy the selected endpoint cell, or copy the whole endpoint row as tab-separated text from the context menu.
+- Show scan progress directly in the tool window.
+- Export all scanned endpoint results to CSV.
 - Double-click a result row to navigate to source code or a decompiled dependency class.
 
 ### Suggested tags
@@ -57,6 +60,9 @@ Spring URL Scanner 是一个面向 Java/Spring 项目的 IntelliJ IDEA 插件，
 - 自动合并类级别和方法级别路径，生成完整接口 URL。
 - 可选扫描带有 `@FeignClient` 注解的 OpenFeign 接口。
 - 支持按类型、URL、Controller/Client 类、处理方法或来源 JAR 过滤结果。
+- 支持复制选中的单元格，也可以通过右键菜单将整行接口信息复制为带表头的 TSV 文本。
+- 扫描过程中在工具窗口内显示加载动画和状态提示。
+- 支持将全部扫描结果导出为 CSV 文件。
 - 双击结果行可跳转到源码或依赖中的反编译类。
 
 ### 建议标签
